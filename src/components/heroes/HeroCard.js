@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../../css/index.css'; // Tell webpack that Button.js uses these styles
 
 export const HeroCard = ({
     id,
@@ -10,12 +11,12 @@ export const HeroCard = ({
 
 }) => {
     return (
-        <div className="card ms-3" style={{ maxwidth: 540 }}>
+        <div className="card card-glass" style={{ maxWidth: 540 }}>
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={`./assets/${id}.jpg`} className="card-img" alt={superhero} />
+                    <img src={`./assets/${id}.jpg`} className="card-img card-glass" alt={superhero} />
                 </div>
-                <div className="col-md-8" >
+                <div className="col-md-8 ">
                     <div className="card-body">
                         <h5 className="card-title">
                             {superhero}

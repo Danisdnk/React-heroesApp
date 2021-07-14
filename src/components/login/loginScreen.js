@@ -3,7 +3,12 @@ import React from 'react'
 export const loginScreen = ({ history }) => {
 
     const handleLogin = () => {
-        history.replace('/');
+        if (history.length <= 2) {
+            history.replace('/');
+        }
+        else {
+            history.goBack();
+        }
     }
     return (
         <div className="container mt-5">
